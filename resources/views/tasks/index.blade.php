@@ -169,7 +169,7 @@
             </div>  
             <nav class="site-navigation">
                 <ul class="nav">
-                <li><a href="tasks">Tasks</a></li> 
+                <li><a href="/tasks">Tasks</a></li> 
                 <li><a href="#">About</a></li> 
                 </ul>
             </nav>
@@ -178,8 +178,14 @@
 
         <main>
             <div class="content">
-                <h1>Hello <?=$name;?>!</h1>
-                
+                <h2>Tasks list</h2>
+                <div class="tasks-list">
+                    <ul>
+                    @foreach ($tasks as $task)
+                            <li><p><a href="/tasks/{{ $task->id }}"> {{ $task->body }} </a>({{ $task->created_at != NULL ? $task->created_at : 'Без даты' }})</p></li>
+                    @endforeach
+                    </ul>
+                </div>
             </div>
         </main>
 

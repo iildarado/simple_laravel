@@ -61,6 +61,14 @@
                     min-height: 100vh;
                 }
 
+                .task-body {
+                    margin: 0px 15px;
+                }
+                .task-body p {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
                 .footer {
                 display: flex;
                 flex-flow: row wrap;
@@ -169,7 +177,7 @@
             </div>  
             <nav class="site-navigation">
                 <ul class="nav">
-                <li><a href="tasks">Tasks</a></li> 
+                <li><a href="/tasks">Tasks</a></li> 
                 <li><a href="#">About</a></li> 
                 </ul>
             </nav>
@@ -178,7 +186,12 @@
 
         <main>
             <div class="content">
-                <h1>Hello <?=$name;?>!</h1>
+                <div class="task-head">
+                    <h2>Задача №{{ $task->id }}</h2>
+                </div>
+                <div class="task-body">
+                    <p> {{ $task->body }}</p>
+                </div>
                 
             </div>
         </main>
