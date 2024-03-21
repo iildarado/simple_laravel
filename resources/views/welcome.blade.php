@@ -1,13 +1,12 @@
 <!doctype html>
 <html>
-    <head>
-        <title>Simple Laravel</title>
-    </head>
+<head>
+    <title>Simple Laravel</title>
+</head>
     <body>
-        <h1>Welcome!</h1>
+        <h1>Hello World!</h1>
         <div>
-            <p>Ha-ha-ha</p>
+            <p>Successfully!</p>
         </div>
     </body>
 </html>
-
