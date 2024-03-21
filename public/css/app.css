@@ -155,4 +155,52 @@ body {
     .footer__nav {
         flex: 2 0px;
     }
+
+    .task-body {
+        padding: 0px 20px;
+        font-size: 16px;
+    }
+
+    .task-creating-form {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .task-creating-form p {
+        margin-left: 2px;
+        font-weight: 500;
+    }
+
+    
+    .task-creating-input input{
+        width: 30%;
+        padding: 7px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+    }
+    
+    .task-creating-button {
+        margin: 10px 0px;
+    }
+    .task-creating-button button{
+        margin-top: 10px;
+        padding: 5px 15px;
+        border-radius: 7px;
+        background-color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #333;
+        border: solid 1px #999;
+    }
+    .task-creating-button button:hover{
+        background-color: #c0ff8cc2;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #333;
+        border: solid 1px #999;
+    }
 }
+
