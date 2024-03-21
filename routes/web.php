@@ -2,23 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+define('CONTROLLERS_PATH', 'App\Http\Controllers\\');
 
-Route::get('/', function () {
+Route::get('/', CONTROLLERS_PATH . 'MainController@index');
+Route::get('/tasks', CONTROLLERS_PATH . 'TasksController@index');
+Route::get('/tasks/{id}', CONTROLLERS_PATH . 'TasksController@show');
 
-    $name = 'Almas';
 
-    return view('welcome', ['name'=>$name, ]);
-});
 
-Route::get('/tasks', function () {
-
-    $tasks = DB::table('tasks')->get();
-    return view('tasks.index', ['tasks'=>$tasks]);
-});
-
-Route::get('/tasks/{id}', function ($id) {
-
-    $task = DB::table('tasks')->find($id);
-
-    return view('tasks.show', compact('task'));
-});
