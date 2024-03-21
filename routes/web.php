@@ -2,15 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+define('CONTROLLERS_PATH', 'App\Http\Controllers\\');
 
-    $name = 'Almas';
-    $tasks = [
-        'Просмотреть весь курс',
-        'Прочитать книгу',
-        'Написать свой проект'
-    ];
+// Route::get('/', function() {
+//     return view('welcome');
+// });
 
-    return view('welcome', ['name'=>$name, 'tasks'=>$tasks]);
+Route::get('/', CONTROLLERS_PATH . 'MainController@index');
+Route::get('/tasks', CONTROLLERS_PATH . 'TasksController@index');
+Route::get('/tasks/{task}', CONTROLLERS_PATH . 'TasksController@show');
 
-});
+
