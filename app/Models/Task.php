@@ -13,4 +13,9 @@ class Task extends Model
     {
         return static::where('completed', 1)->get();
     }
+
+    public function getRouteKeyName()
+    {
+        return 'id';
+    }
 }
