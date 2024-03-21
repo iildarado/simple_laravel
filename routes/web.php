@@ -3,5 +3,14 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $name = 'Almas';
+    $tasks = [
+        'Просмотреть весь курс',
+        'Прочитать книгу',
+        'Написать свой проект'
+    ];
+
+    return view('welcome', ['name'=>$name, 'tasks'=>$tasks]);
+
 });
