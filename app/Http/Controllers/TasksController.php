@@ -57,9 +57,12 @@ class TasksController extends Controller
             'body' =>'required',
         ]);
 
+        $completed = $request->completed ? true : false;
+        
         $task->update([
             'head' => $request->head,
-            'body' => $request->body
+            'body' => $request->body,
+            'completed' => $completed
         ]);
 
         return redirect('/tasks/' . $task->id);

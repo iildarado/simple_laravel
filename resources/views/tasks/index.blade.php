@@ -2,7 +2,9 @@
 
 @section('content')
 
-        
+        <main>
+            <div class="content">
+                <h1>Your tasks</h1>
                 <div class="tasks-list">
                     <ul>
                     @foreach ($tasks as $task)
