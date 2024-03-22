@@ -281,6 +281,34 @@ body {
 
     .subtasks-list {
         color: #6d6d6d;
+        accent-color: #51f74b;
+    }
+    .subtasks-list li {
+        list-style: none;
+    }
+
+    .add-step-of-task {
+        margin-top: 10px;
+        right: 27px;
+        position: relative;
+    }
+
+    .add-step-of-task input {
+
+        accent-color: #dddcdc;
+        width: 500px;
+        padding: 7px 10px;
+        border-radius:  0 5px 5px 0 ;
+        font-size: 14px;
+        border: 1px solid #ccc;
+    }
+
+    .add-step-of-task button {
+
+        padding: 7px 10px;
+        border-radius: 5px 0 0 5px;
+        font-size: 14px;
+        border: 1px solid #ccc;
     }
 
 }

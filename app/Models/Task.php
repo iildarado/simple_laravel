@@ -26,4 +26,10 @@ class Task extends AppModel
     {
         return $this->hasMany(Step::class);
     }
+
+    public function addStep(array $data)
+    {   
+        $data['task_id'] = $this->id;
+        return Step::create($data);
+    }
 }
