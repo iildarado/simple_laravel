@@ -9,6 +9,15 @@
                 </div>
                 <div class="task-body">
                     <p> {{ $task->body }}</p>
+                    <div class="subtasks-list">
+                        @if ($task->steps->count() > 0)
+                            <ul>
+                                @foreach ($task->steps as $step)
+                                    <li><i>{{ $step->description }}</i>
+                                @endforeach
+                            </ul>
+                        @endif
+                    </div>
                     <div class="task-delete">
                         <form method="post" action="/tasks/{{ $task->id }}">
                             

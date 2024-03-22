@@ -9,7 +9,8 @@ class Task extends AppModel
 {
     use HasFactory;
 
-    public $guarded = [];
+    public $fillable = ['head', 'body', 'completed'];
+    // public $guarded = [];
 
     public static function completed() 
     {
@@ -19,5 +20,10 @@ class Task extends AppModel
     public function getRouteKeyName()
     {
         return 'id';
+    }
+
+    public function steps() 
+    {
+        return $this->hasMany(Step::class);
     }
 }
