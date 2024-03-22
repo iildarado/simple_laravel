@@ -16,3 +16,6 @@ Route::get('/tasks/{task}/edit', CONTROLLERS_PATH. 'TasksController@edit');
 Route::patch('/tasks/{task}', CONTROLLERS_PATH. 'TasksController@update');
 
 Route::delete('/tasks/{task}', CONTROLLERS_PATH. 'TasksController@destroy');
+
+Route::patch('/steps/{step}', CONTROLLERS_PATH. 'TaskStepsController@update');
+Route::post('/tasks/{task}/steps', CONTROLLERS_PATH. 'TaskStepsController@store');
