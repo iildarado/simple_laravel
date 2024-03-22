@@ -9,7 +9,16 @@
                 </div>
                 @include('layout.errors') 
                 <div class="task-body">
+                    <div class="task-tags">
+                        @if ($task->tags->count() > 0)
+                            @foreach ($task->tags as $tag)
+                                <b>{{ $tag->name }} </b>
+                            @endforeach
+                        @endif 
+                    </div>
+
                     <p> {{ $task->body }}</p>
+                    
                     <div class="subtasks-list">
                         <ul>
                             @if ($task->steps->count() > 0)

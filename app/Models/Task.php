@@ -32,4 +32,9 @@ class Task extends AppModel
         $data['task_id'] = $this->id;
         return Step::create($data);
     }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
 }

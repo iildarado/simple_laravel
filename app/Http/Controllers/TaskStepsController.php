@@ -22,10 +22,6 @@ class TaskStepsController extends Controller
         $task->addStep(request()->validate([
             'description' => 'required'
         ]));
-        Step::create([
-            'task_id' => $task->id,
-            'description' => request('description')
-        ]);
 
         return back();
     }
