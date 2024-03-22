@@ -10,7 +10,7 @@ class TasksController extends Controller
     
     public function index()
     {
-        $tasks = Task::get();
+        $tasks = Task::latest()->get();
 
         return view('tasks.index', compact('tasks'));
     }
@@ -27,6 +27,11 @@ class TasksController extends Controller
 
     public function store(Request $request) 
     {
+        $request->validateWithBag('default', [
+            'head' => 'required',
+            'body' => 'required',
+        ]);
+
         Task::create([
             'head' => $request->head,
             'body' => $request->body

@@ -5,8 +5,11 @@
     <main>
         <div class="content">
             <h2>Creating New Task</h1>
-            
+
                 <div class="task-creating-form">
+
+                    @include('layout.errors') 
+                    
                     <form method="POST" action="/tasks">
                         @csrf
                         <input type="hidden" name="" value="">
@@ -22,6 +25,8 @@
                         </div>
                     </form>
                 </div>
+
         </div>
     </main>    
+
 @endsection
