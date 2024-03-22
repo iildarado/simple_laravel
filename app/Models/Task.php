@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+use App\Models\Model as AppModel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
-class Task extends Model
+class Task extends AppModel
 {
     use HasFactory;
+
+    public $guarded = [];
 
     public static function completed() 
     {

@@ -5,7 +5,7 @@
         <main>
             <div class="content">
                 <div class="task-head">
-                    <h2>Задача №{{ $task->id }}</h2>
+                    <h2>Task #{{ $task->id . ' - ' . $task->head}}</h2>
                 </div>
                 <div class="task-body">
                     <p> {{ $task->body }}</p>

@@ -155,4 +155,69 @@ body {
     .footer__nav {
         flex: 2 0px;
     }
+
+    .tasks-list {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .task-body {
+        padding: 0px 20px;
+        font-size: 16px;
+    }
+
+    .task-creating-form {
+        padding: 10px;
+        font-size: 14px;
+        width: 30%;
+    }
+
+    .task-creating-form p {
+        margin-left: 2px;
+        font-weight: 500;
+    }
+
+    
+    .task-creating-input input{
+        width: 100%;
+        padding: 7px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+    }
+    
+    .task-creating-button {
+        margin: 10px 0px;
+    }
+    .task-creating-button button{
+        margin-top: 10px;
+        padding: 5px 15px;
+        border-radius: 7px;
+        background-color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #333;
+        border: solid 1px #999;
+    }
+    .task-creating-button button:hover{
+        background-color: #c0ff8cc2;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #333;
+        border: solid 1px #999;
+    }
+
+    .allert-danger {
+        background-color: #ff606065;
+        color: #ff3131;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 10px;
+        padding: 3px 5px;
+        border: solid 2px #fc3a3a;
+        width: 100%;
+    }
 }
+
