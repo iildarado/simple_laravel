@@ -158,7 +158,29 @@ body {
 
     .tasks-list {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 500;
+        width: 30%;
+    }
+
+    .task-completed-head {
+        color: #4ae944;
+        text-decoration: line-through;
+    }
+    .task-completed-head a{
+        color: #4ae944;
+        text-decoration: line-through;
+    }
+    .task-completed-head a:hover{
+        color: #319e2d;
+    }
+    .task-uncompleted-head {
+        color: #5c5c5c;
+    }
+    .task-uncompleted-head a{
+        color: #5c5c5c;
+    }
+    .task-uncompleted-head a:hover{
+        color: #363636;
     }
 
     .task-body {
@@ -169,7 +191,7 @@ body {
     .task-creating-form {
         padding: 10px;
         font-size: 14px;
-        width: 30%;
+        width: 40%;
     }
 
     .task-creating-form p {
@@ -219,5 +241,15 @@ body {
         border: solid 2px #fc3a3a;
         width: 100%;
     }
+
+    .task-delete button{
+
+        border: 2px solid #fc3a3a;
+        color: #fc3a3a;
+        font-size: 14px;
+        background-color: #efefef;
+
+    }
+
 }
 

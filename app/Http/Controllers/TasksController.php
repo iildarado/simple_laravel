@@ -10,7 +10,12 @@ class TasksController extends Controller
     
     public function index()
     {
-        $tasks = Task::latest()->get();
+        $tasks = Task::latest('completed')->get();
+        $count_of_tasks = count($tasks) % 2 == 0 ? (int)count($tasks) / 2 : (int)(count($tasks) / 2) + 1;
+
+        for ($i = 0; $i < $count_of_tasks; $i++) {
+            [$tasks[$i], $tasks[count($tasks) - $i - 1]] = [$tasks[count($tasks) - $i - 1], $tasks[$i]];
+        }
 
         return view('tasks.index', compact('tasks'));
     }
@@ -36,6 +41,33 @@ class TasksController extends Controller
             'head' => $request->head,
             'body' => $request->body
         ]);
+
+        return redirect('/tasks');
+    }
+    
+    public function edit(Task $task) 
+    {
+        return view('tasks.edit', compact('task'));
+    }
+
+    public function update(Request $request, Task $task) 
+    {
+        $request->validateWithBag('default', [
+            'head' =>'required',
+            'body' =>'required',
+        ]);
+
+        $task->update([
+            'head' => $request->head,
+            'body' => $request->body
+        ]);
+
+        return redirect('/tasks/' . $task->id);
+    }
+
+    public function destroy(Task $task) 
+    {
+        $task->delete();
 
         return redirect('/tasks');
     }
